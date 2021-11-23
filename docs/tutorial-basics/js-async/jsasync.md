@@ -1,5 +1,9 @@
 ---
 sidebar_position: 1
+title: Promise 方案
+tags:
+  - JavaScript
+  - Async
 ---
 
 # Create a Page

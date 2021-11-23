@@ -1,8 +1,9 @@
 ---
 sidebar_position: 1
+title: Javascript 基础
 ---
 
-# Javascript 基础
+# Javascript
 
 基础如同基建 对前端开发工程师是很重要的，所以我们一起来复习一下总结一下基础吧
 
