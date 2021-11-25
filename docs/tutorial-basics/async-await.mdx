@@ -1,0 +1,18 @@
+---
+sidebar_position: 2
+title: Async Await 方案
+tags:
+  - JavaScript
+  - Async
+---
+
+import CodeBlock from '@theme/CodeBlock';
+import MyComponentSource from '!!raw-loader!/src/sources/async_await';
+
+## async await 原理实现
+
+async await 是 generator 函数和 Promise 的语法糖，具体源码实现如下
+
+<CodeBlock className="language-js" title="Promise 原理实现">
+  {MyComponentSource}
+</CodeBlock>

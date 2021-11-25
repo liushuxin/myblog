@@ -1,0 +1,52 @@
+---
+sidebar_position: 1
+title: Promise 方案
+tags:
+  - JavaScript
+  - Async
+---
+
+import Tabs from '@theme/Tabs';
+
+import TabItem from '@theme/TabItem';
+import CodeBlock from '@theme/CodeBlock';
+import MyComponentSource from '!!raw-loader!/src/sources/my-promise';
+
+# promise 全解析
+
+## Promise 实例方法
+
+- catch()
+- finally()
+- then()
+
+## Promise 静态方法
+
+<Tabs>
+  <TabItem value="apple" label="Promise.all">
+
+    当所有 Promise 都 resolve 时，返回数组结果，任何一个Promise reject 时，返回reject 信息🍎
+
+  </TabItem>
+  <TabItem value="orange" label="Promise.race">
+    This is an orange 🍊
+  </TabItem>
+  <TabItem value="banana1" label="Promise.any">
+    This is a banana 🍌
+  </TabItem>
+  <TabItem value="banana2" label="Promise.allSettled">
+    This is a banana 🍌
+  </TabItem>
+    <TabItem value="banana3" label="Promise.reject">
+    This is a banana 🍌
+  </TabItem>
+  <TabItem value="banana4" label="Promise.resolve">
+    This is a banana 🍌
+  </TabItem>
+</Tabs>
+
+## 手写源码
+
+<CodeBlock className="language-jsx" title="Promise 原理实现">
+  {MyComponentSource}
+</CodeBlock>
