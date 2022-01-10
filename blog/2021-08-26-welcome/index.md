@@ -1,13 +1,13 @@
 ---
 slug: welcome
-title: Welcome
-authors: [slorber, yangshun]
-tags: [facebook, hello, docusaurus]
+title: 实现一个动画组件
+authors: [shuxin]
+tags: [react, animation]
 ---
 
-[Docusaurus blogging features](https://docusaurus.io/docs/blog) are powered by the [blog plugin](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog).
 
-Simply add Markdown files (or folders) to the `blog` directory.
+
+Hello 大家好，今天给大家带来的文章是关于如何封装一个对不定高度的内容，显示隐藏的react 动画组件
 
 Regular blog authors can be added to `authors.yml`.
 

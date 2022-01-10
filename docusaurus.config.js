@@ -38,9 +38,9 @@ const config = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'react-docs',
-        path: 'react-docs',
-        routeBasePath: 'react-docs',
+        id: 'js-docs',
+        path: 'js-docs',
+        routeBasePath: 'js-docs',
         sidebarPath: require.resolve('./sidebarsReact.js'),
         // ... other options
       },
@@ -73,7 +73,7 @@ const config = {
             position: 'left',
             label: 'JavaScript基础',
           },
-          { to: '/react-docs/index', label: 'React', position: 'left' },
+          { to: '/js-docs/index', label: 'JS 框架', position: 'left' },
           { to: '/css-docs/index', label: 'CSS', position: 'left' },
           { to: '/blog', label: '博客', position: 'left' },
 

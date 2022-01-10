@@ -2,11 +2,11 @@
 sidebar_position: 1
 ---
 
-# Manage Docs Versions
+## Object 对象
 
-Docusaurus can manage multiple versions of your docs.
+Object 对象是javascript 中内置的基础对象，该对象上包含了很多有用的方法，接下来我们就一起来看一下吧
 
-## Create a docs version
+### Object.assign
 
 Release a version 1.0 of your project:
 
@@ -21,7 +21,7 @@ Your docs now have 2 versions:
 - `1.0` at `http://localhost:3000/docs/` for the version 1.0 docs
 - `current` at `http://localhost:3000/docs/next/` for the **upcoming, unreleased docs**
 
-## Add a Version Dropdown
+### Object.is
 
 To navigate seamlessly across versions, add a version dropdown.
 
@@ -43,7 +43,7 @@ module.exports = {
 };
 ```
 
-The docs version dropdown appears in your navbar:
+### Object.defineProperty
 
 ![Docs Version Dropdown](/img/tutorial/docsVersionDropdown.png)
 

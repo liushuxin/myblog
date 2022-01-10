@@ -1,45 +1,37 @@
 ---
 sidebar_position: 2
 ---
+## Proxy 代理对象
 
-# Translate your site
+Proxy 对象主要是用来对一个对象进行代理
 
-Let's translate `docs/intro.md` to French.
-
-## Configure i18n
+### 用法
 
 Modify `docusaurus.config.js` to add support for the `fr` locale:
 
 ```js title="docusaurus.config.js"
-module.exports = {
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en', 'fr'],
-  },
-};
+const data = {
+  a:1,
+  b:2
+}
+const proxy = new Proxy(data,{
+  get(target,property){
+    console.log(property);
+    return Reflect.get(target,property)
+  }
+});
 ```
 
-## Translate a doc
+### Reflect
 
-Copy the `docs/intro.md` file to the `i18n/fr` folder:
+Reflect 内部封装了一系列对对象的底层操作
+Reflect成员方法就是Proxy处理对象的默认实现
 
-```bash
-mkdir -p i18n/fr/docusaurus-plugin-content-docs/current/
+#### 作用
+统一提供一套用于操作对象的API
 
-cp docs/intro.md i18n/fr/docusaurus-plugin-content-docs/current/intro.md
-```
 
-Translate `i18n/fr/docusaurus-plugin-content-docs/current/intro.md` in French.
 
-## Start your localized site
-
-Start your site on the French locale:
-
-```bash
-npm run start -- --locale fr
-```
-
-Your localized site is accessible at `http://localhost:3000/fr/` and the `Getting Started` page is translated.
 
 :::caution
 
