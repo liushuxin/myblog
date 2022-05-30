@@ -1,13 +1,11 @@
 ---
 slug: welcome
-title: 实现一个动画组件
+title: 实现一个显示隐藏动画组件
 authors: [shuxin]
 tags: [react, animation]
 ---
 
-
-
-Hello 大家好，今天给大家带来的文章是关于如何封装一个对不定高度的内容，显示隐藏的react 动画组件
+Hello 大家好，今天给大家带来的文章是关于如何封装一个对不定高度的内容，显示隐藏的 react 动画组件
 
 Regular blog authors can be added to `authors.yml`.
 

@@ -1,57 +1,57 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require("prism-react-renderer/themes/github");
+const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'SHUXIN DOCS',
-  tagline: 'My way to advance in front-end technology',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
-  organizationName: 'shuxinliu', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  title: "HAHA的佛系空间",
+  tagline: "一切过往，皆为序章",
+  url: "https://your-docusaurus-test-site.com",
+  baseUrl: "/",
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
+  favicon: "img/favicon.ico",
+  organizationName: "shuxinliu", // Usually your GitHub org/user name.
+  projectName: "docusaurus", // Usually your repo name.
 
   presets: [
     [
-      '@docusaurus/preset-classic',
+      "@docusaurus/preset-classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve("./sidebars.js"),
         },
 
         blog: {
           showReadingTime: true,
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
       }),
     ],
   ],
   plugins: [
     [
-      '@docusaurus/plugin-content-docs',
+      "@docusaurus/plugin-content-docs",
       {
-        id: 'js-docs',
-        path: 'js-docs',
-        routeBasePath: 'js-docs',
-        sidebarPath: require.resolve('./sidebarsReact.js'),
+        id: "js-docs",
+        path: "js-docs",
+        routeBasePath: "js-docs",
+        sidebarPath: require.resolve("./sidebarsReact.js"),
         // ... other options
       },
     ],
     [
-      '@docusaurus/plugin-content-docs',
+      "@docusaurus/plugin-content-docs",
       {
-        id: 'css-docs',
-        path: 'css-docs',
-        routeBasePath: 'css-docs',
-        sidebarPath: require.resolve('./sidebarsReact.js'),
+        id: "css-docs",
+        path: "css-docs",
+        routeBasePath: "css-docs",
+        sidebarPath: require.resolve("./sidebarsReact.js"),
         // ... other options
       },
     ],
@@ -61,60 +61,60 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'shuxinliu',
+        title: "shuxinliu",
         logo: {
-          alt: 'shuxinliu',
-          src: 'img/logo.svg',
+          alt: "shuxinliu",
+          src: "img/logo.svg",
         },
         items: [
           {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'JavaScript基础',
+            type: "doc",
+            docId: "intro",
+            position: "left",
+            label: "JavaScript基础",
           },
-          { to: '/js-docs/index', label: 'JS 框架', position: 'left' },
-          { to: '/css-docs/index', label: 'CSS', position: 'left' },
-          { to: '/blog', label: '博客', position: 'left' },
+          { to: "/js-docs/index", label: "JS 框架", position: "left" },
+          { to: "/css-docs/index", label: "CSS", position: "left" },
+          { to: "/blog", label: "博客", position: "left" },
 
           {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
+            href: "https://github.com/facebook/docusaurus",
+            label: "GitHub",
+            position: "right",
           },
         ],
       },
       footer: {
-        style: 'dark',
+        style: "dark",
         links: [
           {
-            title: 'Docs',
+            title: "Docs",
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: "Tutorial",
+                to: "/docs/intro",
               },
             ],
           },
           {
-            title: 'Community',
+            title: "Community",
             items: [
               {
-                label: 'My Github',
-                href: 'https://github.com/liushuxin',
+                label: "My Github",
+                href: "https://github.com/liushuxin",
               },
             ],
           },
           {
-            title: 'More',
+            title: "More",
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: "Blog",
+                to: "/blog",
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/liushuxin',
+                label: "GitHub",
+                href: "https://github.com/liushuxin",
               },
             ],
           },
