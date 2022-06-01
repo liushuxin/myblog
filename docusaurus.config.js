@@ -55,6 +55,26 @@ const config = {
         // ... other options
       },
     ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "reading",
+        path: "reading",
+        routeBasePath: "reading",
+        sidebarPath: require.resolve("./sidebarsReact.js"),
+        // ... other options
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "English",
+        path: "English",
+        routeBasePath: "English",
+        sidebarPath: require.resolve("./sidebarsReact.js"),
+        // ... other options
+      },
+    ],
   ],
 
   themeConfig:
@@ -75,6 +95,9 @@ const config = {
           },
           { to: "/js-docs/index", label: "JS 框架", position: "left" },
           { to: "/css-docs/index", label: "CSS", position: "left" },
+          { to: "/reading/index", label: "阅读", position: "left" },
+          { to: "/English/index", label: "英语学习", position: "left" },
+
           { to: "/blog", label: "博客", position: "left" },
 
           {

@@ -5,4 +5,4 @@ title: CSS 设计模式
 
 ## CSS 设计模式
 
-### OOCSS
+### OOCSS (面向对象)
