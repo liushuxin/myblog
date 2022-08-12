@@ -58,6 +58,27 @@ const config = {
     [
       "@docusaurus/plugin-content-docs",
       {
+        id: "build-tools",
+        path: "build-tools",
+        routeBasePath: "build-tools",
+        sidebarPath: require.resolve("./sidebarsReact.js"),
+        // ... other options
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "data-structure",
+        path: "data-structure",
+        routeBasePath: "data-structure",
+        sidebarPath: require.resolve("./sidebarsReact.js"),
+        // ... other options
+      },
+    ],
+
+    [
+      "@docusaurus/plugin-content-docs",
+      {
         id: "reading",
         path: "reading",
         routeBasePath: "reading",
@@ -95,6 +116,17 @@ const config = {
           },
           { to: "/js-docs/index", label: "JS 框架", position: "left" },
           { to: "/css-docs/index", label: "CSS", position: "left" },
+          {
+            to: "/build-tools/webpack/index",
+            label: "构建工具",
+            position: "left",
+          },
+          {
+            to: "/data-structure/index",
+            label: "算法与数据结构",
+            position: "left",
+          },
+
           { to: "/reading/index", label: "阅读", position: "left" },
           { to: "/English/index", label: "英语学习", position: "left" },
 
