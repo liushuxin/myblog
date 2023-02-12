@@ -63,7 +63,7 @@ function quickSort(arr) {
   return quickSort(left).concat([pivot], quickSort(right));
 }
 
-console.log("object");
+//console.log("object");
 const data = console.log(quickSort([3, 4, 6, 222, 333, 22222, 3, 5, 6]));
 
 //函数去抖

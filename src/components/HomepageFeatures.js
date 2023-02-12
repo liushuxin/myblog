@@ -4,9 +4,9 @@ import styles from "./HomepageFeatures.module.css";
 
 const FeatureList = [
   {
-    title: "这个世上最远的距离，就是知道和做到",
+    title: "。。。。。。。。。。",
     Svg: require("../../static/img/undraw_docusaurus_mountain.svg").default,
-    description: <>一切有为法，如梦幻泡影，如露亦如电，应作如是观</>,
+    description: <>。。。。。。。。。</>,
   },
   {
     title: "人生有很多的挫折，人也有很多的苦楚",
