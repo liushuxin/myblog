@@ -9,16 +9,14 @@ const FeatureList = [
     description: <>。。。。。。。。。</>,
   },
   {
-    title: "人生有很多的挫折，人也有很多的苦楚",
+    title: "笑对",
     Svg: require("../../static/img/undraw_docusaurus_tree.svg").default,
-    description: (
-      <>但你之所以选择以这样的身份来人世间，那就一定有值得期待的事情</>
-    ),
+    description: <>你好</>,
   },
   {
     title: "做你该做的事情，并接受事与愿违",
     Svg: require("../../static/img/undraw_docusaurus_react.svg").default,
-    description: <>许多事情不是看到了希望才坚持，而是坚持了才看到了希望</>,
+    description: <>Fight</>,
   },
 ];
 
