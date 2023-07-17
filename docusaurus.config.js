@@ -8,13 +8,13 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "新之所向",
   tagline: "Stay hungry, stay foolish",
-  url: "https://your-docusaurus-test-site.com",
+  url: "https://lanxin2021.github.io",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
-  organizationName: "shuxinliu", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  organizationName: "lanxin2021", // Usually your GitHub org/user name.
+  projectName: "lanxin2021.github.io", // Usually your repo name.
 
   presets: [
     [
