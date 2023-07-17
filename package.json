@@ -2,6 +2,7 @@
   "name": "my-website",
   "version": "0.0.0",
   "private": true,
+  "homepage": "https://github.com/lanxin2021/lanxin2021.github.io.git",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
