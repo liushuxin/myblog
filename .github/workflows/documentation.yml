@@ -1,4 +1,4 @@
-name: Deploy Github pages
+name: GitHub Actions Build and Deploy Demo
 on:
   push:
     branches:
@@ -9,15 +9,10 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@master
-      with:
-        persist-credentials: false
-    - name: Install and Build
-      run: |
-        npm install
-        npm run-script build
-    - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@releases/v3
-      with:
+
+    - name: Build and Deploy
+      uses: JamesIves/github-pages-deploy-action@master
+      env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BRANCH: gh-pages
         FOLDER: build
