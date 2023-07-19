@@ -8,8 +8,8 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "新之所向",
   tagline: "Stay hungry, stay foolish",
-  url: "https://lanxin2021.github.io",
-  baseUrl: "/",
+  url: "https://liushuxin.github.io/myblog",
+  baseUrl: "/myblog/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
