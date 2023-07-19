@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[7483],{9802:e=>{e.exports=JSON.parse('{"pluginId":"English","version":"current","label":"Next","banner":null,"badge":false,"className":"docs-version-current","isLast":true,"docsSidebars":{"tutorialSidebar":[{"type":"link","label":"\u82f1\u8bed\u5b66\u4e60","href":"/myblog/English/index"}]}}')}}]);
