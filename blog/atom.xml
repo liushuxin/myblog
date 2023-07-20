@@ -27,6 +27,17 @@ mac 端：Safari → 偏好设置 → 高级 → 在菜单栏中显示“开发�
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[从 0 实现一个前端监控 SDK]]></title>
+        <id>AJAX</id>
+        <link href="https://liushuxin.github.io/myblog/blog/AJAX"/>
+        <updated>2021-12-17T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Docusaurus Plushie]]></summary>
+        <author>
+            <name>刘述新</name>
+            <uri>https://github.com/endiliey</uri>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[实现一个显示隐藏动画组件]]></title>
         <id>welcome</id>
         <link href="https://liushuxin.github.io/myblog/blog/welcome"/>
