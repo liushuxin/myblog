@@ -2,11 +2,94 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://liushuxin.github.io/myblog/blog</id>
     <title>新之所向 Blog</title>
-    <updated>2022-01-03T00:00:00.000Z</updated>
+    <updated>2023-09-07T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://liushuxin.github.io/myblog/blog"/>
     <subtitle>新之所向 Blog</subtitle>
     <icon>https://liushuxin.github.io/myblog/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[MACOS 中通过命令来控制电脑交互]]></title>
+        <id>MACOS</id>
+        <link href="https://liushuxin.github.io/myblog/blog/MACOS"/>
+        <updated>2023-09-07T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Applescript]]></summary>
+        <content type="html"><![CDATA[<h4>Applescript</h4><p>是苹果公司开发的一种脚本语言，可以用来控制运行于Mac OS上的程序，也可以写成独立运行的Applet</p><p>可以用于控制多个项目一键启动，配合iTrem2 效果可以说是比较不错的</p><pre><code class="language-shell">set project1 to &quot; cd ~/project1&quot;
+set project2 to &quot;cd ~/project2&quot;
+set project3 to &quot;cd ~/project3&quot;
+set project4 to &quot;cd ~/project4&quot;
+#applescript
+
+tell application &quot;iTerm&quot;
+    activate
+end tell
+
+tell application &quot;System Events&quot;
+
+    tell process &quot;iTerm&quot;
+
+        # project1 1
+        keystroke project1
+        delay 1 -- 延时一秒后执行
+        key code 36
+        delay 1
+
+        keystroke &quot;pnpm start&quot;
+        delay 1 -- 延时一秒后执行
+        key code 36
+        delay 1
+
+
+        # project2 2
+        key code 2 using {command down}
+        delay 1
+
+        keystroke project2
+        delay 1 -- 延时一秒后执行
+        key code 36
+    delay 1
+
+        keystroke &quot;pnpm start&quot;
+        delay 1
+        key code 36
+        delay 1
+
+
+
+        # project3
+        key code 2 using {command down}
+        delay 1
+
+        keystroke project3
+        delay 1
+        key code 36
+        delay 1
+
+        keystroke &quot;pnpm start:debug&quot;
+        delay 1 -- 延时一秒后执行
+        key code 36
+        delay 1
+
+        # project4
+        key code 2 using {command down}
+        delay 1
+        keystroke project4
+        delay 1
+        key code 36
+        delay 1
+
+        keystroke &quot;npm run start:saasstg&quot;
+        delay 1 -- 延时一秒后执行
+        key code 36
+        delay 1
+    end tell
+
+end tell
+</code></pre>]]></content>
+        <author>
+            <name>刘述新</name>
+            <uri>https://github.com/endiliey</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[移动端网页调试相关技巧]]></title>
         <id>移动端网页调试相关技巧</id>
@@ -75,8 +158,8 @@ mac 端：Safari → 偏好设置 → 高级 → 在菜单栏中显示“开发�
     </entry>
     <entry>
         <title type="html"><![CDATA[前端理解的登录与鉴权]]></title>
-        <id>鉴权</id>
-        <link href="https://liushuxin.github.io/myblog/blog/鉴权"/>
+        <id>JQ</id>
+        <link href="https://liushuxin.github.io/myblog/blog/JQ"/>
         <updated>2021-01-07T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[hello 小伙伴们，今天给大家带来的是关于，登录-鉴权相关知识，SSO OATH2 JWT, BA 认证]]></summary>
         <content type="html"><![CDATA[<p>hello 小伙伴们，今天给大家带来的是关于，登录-鉴权相关知识，SSO OATH2 JWT, BA 认证</p>]]></content>
