@@ -7,17 +7,92 @@ tags: [react, animation]
 
 Hello 大家好，今天给大家带来的文章是关于如何封装一个对不定高度的内容，显示隐藏的 react 动画组件
 
-Regular blog authors can be added to `authors.yml`.
+`````javascript
+import React, { FC, useRef, useEffect, useState, CSSProperties } from 'react';
+import ResizeObserver from 'resize-observer-polyfill';
+import { Transition } from 'react-transition-group';
+import type { Property } from 'csstype';
+import { debounce } from 'lodash';
+/**
+ *
+ * @returns 动画版显示隐藏组件
+ */
+interface AnimationShowProps {
+  // default 300ms
+  duration?: number;
+  // whether visible
+  visible: boolean;
+  timingFunction?: Property.AnimationTimingFunction;
+  style?: CSSProperties;
+}
+const resize = (setConHeight: () => void) => debounce(setConHeight, 300);
 
-The blog post date can be extracted from filenames, such as:
+const AnimationShow: FC<AnimationShowProps> = ({
+  duration = 300,
+  timingFunction = 'linear',
+  visible,
+  children,
+  style,
+}) => {
+  const [height, setHeight] = useState(0);
+  const divRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    // listen container resize
+    const setConHeight = (): void => {
+      const clientRect = divRef.current?.getBoundingClientRect();
+      if (clientRect) {
+        setHeight(clientRect ? clientRect.height : 0);
+      }
+    };
 
-- `2019-05-30-welcome.md`
-- `2019-05-30-welcome/index.md`
+    const resizeObserver = new ResizeObserver(resize(setConHeight));
 
-A blog post folder can be convenient to co-locate blog post images:
+    resizeObserver.observe(divRef.current as HTMLDivElement);
 
-![Docusaurus Plushie](./docusaurus-plushie-banner.jpeg)
+    return function cleanup() {
+      resizeObserver.disconnect();
+    };
+  }, []);
 
-The blog supports tags as well!
+  //css transition
 
-**And if you don't want a blog**: just delete this directory, and use `blog: false` in your Docusaurus config.
+  const defaultStyle = {
+    transition: `height ${duration}ms ${timingFunction}`,
+    height: 0,
+    overflow: 'hidden',
+  };
+
+  const transitionStyles = {
+    entering: {
+      height,
+    },
+    entered: {
+      height,
+    },
+    exiting: { height: 0 },
+    exited: { height: 0 },
+  };
+  // css transition
+  return (
+    <Transition in={visible} timeout={duration}>
+      {(state) => (
+        <div
+          style={{
+            ...style,
+            ...defaultStyle,
+            ...transitionStyles[state],
+          }}
+        >
+          <div ref={divRef} style={{ overflow: 'hidden' }}>
+            {children}
+          </div>
+        </div>
+      )}
+    </Transition>
+  );
+};
+
+export default AnimationShow;
+
+`````
+
