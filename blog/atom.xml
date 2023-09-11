@@ -149,8 +149,93 @@ mac 端：Safari → 偏好设置 → 高级 → 在菜单栏中显示“开发�
         <id>long-blog-post</id>
         <link href="https://liushuxin.github.io/myblog/blog/long-blog-post"/>
         <updated>2021-05-29T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[This is the summary of a very long blog post,]]></summary>
-        <content type="html"><![CDATA[<p>This is the summary of a very long blog post,</p><p>Use a <code>&lt;!--</code> <code>truncate</code> <code>--&gt;</code> comment to limit blog post size in the list view.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>]]></content>
+        <content type="html"><![CDATA[<pre><code class="language-javascript">import React, { FC, useRef, useEffect, useState, CSSProperties } from &#x27;react&#x27;;
+import ResizeObserver from &#x27;resize-observer-polyfill&#x27;;
+import { Transition } from &#x27;react-transition-group&#x27;;
+import type { Property } from &#x27;csstype&#x27;;
+import { debounce } from &#x27;lodash&#x27;;
+/**
+ *
+ * @returns 动画版显示隐藏组件
+ */
+interface AnimationShowProps {
+  // default 300ms
+  duration?: number;
+  // whether visible
+  visible: boolean;
+  timingFunction?: Property.AnimationTimingFunction;
+  style?: CSSProperties;
+}
+const resize = (setConHeight: () =&gt; void) =&gt; debounce(setConHeight, 300);
+
+const AnimationShow: FC&lt;AnimationShowProps&gt; = ({
+  duration = 300,
+  timingFunction = &#x27;linear&#x27;,
+  visible,
+  children,
+  style,
+}) =&gt; {
+  const [height, setHeight] = useState(0);
+  const divRef = useRef&lt;HTMLDivElement&gt;(null);
+  useEffect(() =&gt; {
+    // listen container resize
+    const setConHeight = (): void =&gt; {
+      const clientRect = divRef.current?.getBoundingClientRect();
+      if (clientRect) {
+        setHeight(clientRect ? clientRect.height : 0);
+      }
+    };
+
+    const resizeObserver = new ResizeObserver(resize(setConHeight));
+
+    resizeObserver.observe(divRef.current as HTMLDivElement);
+
+    return function cleanup() {
+      resizeObserver.disconnect();
+    };
+  }, []);
+
+  //css transition
+
+  const defaultStyle = {
+    transition: `height ${duration}ms ${timingFunction}`,
+    height: 0,
+    overflow: &#x27;hidden&#x27;,
+  };
+
+  const transitionStyles = {
+    entering: {
+      height,
+    },
+    entered: {
+      height,
+    },
+    exiting: { height: 0 },
+    exited: { height: 0 },
+  };
+  // css transition
+  return (
+    &lt;Transition in={visible} timeout={duration}&gt;
+      {(state) =&gt; (
+        &lt;div
+          style={{
+            ...style,
+            ...defaultStyle,
+            ...transitionStyles[state],
+          }}
+        &gt;
+          &lt;div ref={divRef} style={{ overflow: &#x27;hidden&#x27; }}&gt;
+            {children}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      )}
+    &lt;/Transition&gt;
+  );
+};
+
+export default AnimationShow;
+
+</code></pre>]]></content>
         <author>
             <name>刘述新</name>
             <uri>https://github.com/endiliey</uri>
