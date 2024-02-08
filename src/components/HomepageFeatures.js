@@ -4,19 +4,19 @@ import styles from "./HomepageFeatures.module.css";
 
 const FeatureList = [
   {
-    title: "。。。。。。。。。。",
+    title: "追求卓越，不忘初心",
     Svg: require("../../static/img/undraw_docusaurus_mountain.svg").default,
-    description: <>。。。。。。。。。</>,
+    description: <>努力做一枚优秀的前端工程师~</>,
   },
   {
-    title: "笑对",
+    title: "你好，5月",
     Svg: require("../../static/img/undraw_docusaurus_tree.svg").default,
-    description: <>你好</>,
+    description: <>愿爱我的人和我爱的人都能够平安幸福，</>,
   },
   {
-    title: "做你该做的事情，并接受事与愿违",
+    title: "做该做的事情，并接受事与愿违",
     Svg: require("../../static/img/undraw_docusaurus_react.svg").default,
-    description: <>Fight</>,
+    description: <>凡是尽力就好</>,
   },
 ];
 

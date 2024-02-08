@@ -10,6 +10,12 @@
   overflow: hidden;
 }
 
+  .heroTitle{
+    color:rgba(255, 255, 255, 0.8);
+  }
+
+
+
 @media screen and (max-width: 966px) {
   .heroBanner {
     padding: 2rem;
