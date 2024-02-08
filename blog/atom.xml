@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://liushuxin.github.io/myblog/blog</id>
-    <title>新之所向 Blog</title>
+    <title>述新的技术博客 Blog</title>
     <updated>2023-09-07T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://liushuxin.github.io/myblog/blog"/>
-    <subtitle>新之所向 Blog</subtitle>
+    <subtitle>述新的技术博客 Blog</subtitle>
     <icon>https://liushuxin.github.io/myblog/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[MACOS 中通过命令来控制电脑交互]]></title>
