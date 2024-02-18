@@ -11,7 +11,7 @@ const FeatureList = [
   {
     title: "你好，2月",
     Svg: require("../../static/img/undraw_docusaurus_tree.svg").default,
-    description: <>过年啦~，愿新的一年，家人平安，在北京的日子能够顺顺利利</>,
+    description: <>心无旁骛，万事可破</>,
   },
   {
     title: "做自己该做的事情，并接受它的事与愿违",
