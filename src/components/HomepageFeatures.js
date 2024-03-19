@@ -9,14 +9,14 @@ const FeatureList = [
     description: <>努力做一枚优秀的前端工程师~</>,
   },
   {
-    title: "你好，2月",
+    title: "你好，3月",
     Svg: require("../../static/img/undraw_docusaurus_tree.svg").default,
     description: <>心无旁骛，万事可破</>,
   },
   {
     title: "做自己该做的事情，并接受它的事与愿违",
     Svg: require("../../static/img/undraw_docusaurus_react.svg").default,
-    description: <>凡事尽力就好~</>,
+    description: <>黑夜很漫长，所以黎明的光才显得那么耀眼~</>,
   },
 ];
 
