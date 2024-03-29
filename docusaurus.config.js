@@ -6,10 +6,10 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "新之所向",
-  tagline: "Stay hungry, stay foolish",
-  url: "https://lanxin2021.github.io",
-  baseUrl: "/",
+  title: "述新的技术博客",
+  tagline: "业精于勤荒于嬉，行成于思毁于随",
+  url: "https://liushuxin.github.io",
+  baseUrl: "/myblog/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
@@ -86,16 +86,6 @@ const config = {
         // ... other options
       },
     ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "English",
-        path: "English",
-        routeBasePath: "English",
-        sidebarPath: require.resolve("./sidebarsReact.js"),
-        // ... other options
-      },
-    ],
   ],
 
   themeConfig:
@@ -128,7 +118,6 @@ const config = {
           },
 
           { to: "/reading/index", label: "阅读", position: "left" },
-          { to: "/English/index", label: "英语学习", position: "left" },
 
           { to: "/blog", label: "博客", position: "left" },
 

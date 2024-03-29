@@ -1,0 +1,89 @@
+---
+slug: MACOS
+title: MACOS 中通过命令来控制电脑交互
+authors: [shuxin]
+tags: [系统]
+---
+
+
+####  Applescript
+
+是苹果公司开发的一种脚本语言，可以用来控制运行于Mac OS上的程序，也可以写成独立运行的Applet
+
+可以用于控制多个项目一键启动，配合iTrem2 效果可以说是比较不错的
+
+
+````shell
+set project1 to " cd ~/project1"
+set project2 to "cd ~/project2"
+set project3 to "cd ~/project3"
+set project4 to "cd ~/project4"
+#applescript
+
+tell application "iTerm"
+    activate
+end tell
+
+tell application "System Events"
+
+	tell process "iTerm"
+
+		# project1 1
+		keystroke project1
+		delay 1 -- 延时一秒后执行
+		key code 36
+		delay 1
+
+		keystroke "pnpm start"
+		delay 1 -- 延时一秒后执行
+		key code 36
+		delay 1
+
+
+		# project2 2
+		key code 2 using {command down}
+		delay 1
+
+		keystroke project2
+		delay 1 -- 延时一秒后执行
+		key code 36
+    delay 1
+
+		keystroke "pnpm start"
+		delay 1
+		key code 36
+		delay 1
+
+
+
+		# project3
+		key code 2 using {command down}
+		delay 1
+
+		keystroke project3
+		delay 1
+		key code 36
+		delay 1
+
+		keystroke "pnpm start:debug"
+		delay 1 -- 延时一秒后执行
+		key code 36
+		delay 1
+
+		# project4
+		key code 2 using {command down}
+		delay 1
+		keystroke project4
+		delay 1
+		key code 36
+		delay 1
+
+		keystroke "npm run start:saasstg"
+		delay 1 -- 延时一秒后执行
+		key code 36
+		delay 1
+	end tell
+
+end tell
+````
+
