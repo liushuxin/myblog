@@ -6,8 +6,8 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "新之所向",
-  tagline: "Stay hungry, stay foolish",
+  title: "述新的技术博客",
+  tagline: "业精于勤荒于嬉，行成于思毁于随",
   url: "https://liushuxin.github.io",
   baseUrl: "/myblog/",
   onBrokenLinks: "throw",

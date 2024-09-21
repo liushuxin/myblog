@@ -4,19 +4,19 @@ import styles from "./HomepageFeatures.module.css";
 
 const FeatureList = [
   {
-    title: "。。。。。。。。。。",
+    title: "悟已往之不谏，知来者之可追",
     Svg: require("../../static/img/undraw_docusaurus_mountain.svg").default,
-    description: <>。。。。。。。。。</>,
+    description: <>努力做一枚优秀的前端工程师~</>,
   },
   {
-    title: "笑对",
+    title: "4月，加油",
     Svg: require("../../static/img/undraw_docusaurus_tree.svg").default,
-    description: <>你好</>,
+    description: <>心无旁骛，万事可破</>,
   },
   {
-    title: "做你该做的事情，并接受事与愿违",
+    title: "做自己该做的事情，并接受它的事与愿违",
     Svg: require("../../static/img/undraw_docusaurus_react.svg").default,
-    description: <>Fight</>,
+    description: <>黑夜很漫长，所以黎明的光才显得那么耀眼~</>,
   },
 ];
 
