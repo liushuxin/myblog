@@ -2,11 +2,23 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://liushuxin.github.io/myblog/blog</id>
     <title>述新的技术博客 Blog</title>
-    <updated>2023-09-07T00:00:00.000Z</updated>
+    <updated>2025-01-05T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://liushuxin.github.io/myblog/blog"/>
     <subtitle>述新的技术博客 Blog</subtitle>
     <icon>https://liushuxin.github.io/myblog/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[移动端开发指南]]></title>
+        <id>long-blog-post</id>
+        <link href="https://liushuxin.github.io/myblog/blog/long-blog-post"/>
+        <updated>2025-01-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[hello 小伙伴们，最近在做移动端响应式相关的页面开发，总结了一些经验，分享给大家]]></summary>
+        <content type="html"><![CDATA[<p>hello 小伙伴们，最近在做移动端响应式相关的页面开发，总结了一些经验，分享给大家</p>]]></content>
+        <author>
+            <name>刘述新</name>
+            <uri>https://github.com/endiliey</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[MACOS 中通过命令来控制电脑交互]]></title>
         <id>MACOS</id>
@@ -224,10 +236,10 @@ export default AnimationShow;
         <link href="https://liushuxin.github.io/myblog/blog/mdx-blog-post"/>
         <updated>2021-08-01T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Blog posts support Docusaurus Markdown features, such as MDX.]]></summary>
-        <content type="html"><![CDATA[<p>Blog posts support <a href="https://docusaurus.io/docs/markdown-features">Docusaurus Markdown features</a>, such as <a href="https://mdxjs.com/">MDX</a>.</p><p>:::tip</p>]]></content>
+        <content type="html"><![CDATA[<p>Blog posts support <a href="https://docusaurus.io/docs/markdown-features">Docusaurus Markdown features</a>, such as <a href="https://mdxjs.com/">MDX</a>.</p><p>:::tip</p><p>测试文案</p>]]></content>
         <author>
-            <name>Sébastien Lorber</name>
-            <uri>https://sebastienlorber.com</uri>
+            <name>刘述新</name>
+            <uri>https://github.com/endiliey</uri>
         </author>
     </entry>
     <entry>

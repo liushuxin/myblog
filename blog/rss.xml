@@ -4,9 +4,17 @@
         <title>述新的技术博客 Blog</title>
         <link>https://liushuxin.github.io/myblog/blog</link>
         <description>述新的技术博客 Blog</description>
-        <lastBuildDate>Thu, 07 Sep 2023 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 05 Jan 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[移动端开发指南]]></title>
+            <link>https://liushuxin.github.io/myblog/blog/long-blog-post</link>
+            <guid>long-blog-post</guid>
+            <pubDate>Sun, 05 Jan 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[hello 小伙伴们，最近在做移动端响应式相关的页面开发，总结了一些经验，分享给大家]]></description>
+            <content:encoded><![CDATA[<p>hello 小伙伴们，最近在做移动端响应式相关的页面开发，总结了一些经验，分享给大家</p>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[MACOS 中通过命令来控制电脑交互]]></title>
             <link>https://liushuxin.github.io/myblog/blog/MACOS</link>
@@ -208,7 +216,7 @@ export default AnimationShow;
             <guid>mdx-blog-post</guid>
             <pubDate>Sun, 01 Aug 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[Blog posts support Docusaurus Markdown features, such as MDX.]]></description>
-            <content:encoded><![CDATA[<p>Blog posts support <a href="https://docusaurus.io/docs/markdown-features">Docusaurus Markdown features</a>, such as <a href="https://mdxjs.com/">MDX</a>.</p><p>:::tip</p>]]></content:encoded>
+            <content:encoded><![CDATA[<p>Blog posts support <a href="https://docusaurus.io/docs/markdown-features">Docusaurus Markdown features</a>, such as <a href="https://mdxjs.com/">MDX</a>.</p><p>:::tip</p><p>测试文案</p>]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[图片的按需加载&列表按需加载]]></title>
