@@ -6,17 +6,17 @@ const FeatureList = [
   {
     title: "悟已往之不谏，知来者之可追",
     Svg: require("../../static/img/undraw_docusaurus_mountain.svg").default,
-    description: <>努力做一枚优秀的前端工程师~</>,
+    description: <></>,
   },
   {
-    title: "4月，加油",
+    title: "应无所住，而生其心",
     Svg: require("../../static/img/undraw_docusaurus_tree.svg").default,
     description: <>心无旁骛，万事可破</>,
   },
   {
     title: "做自己该做的事情，并接受它的事与愿违",
     Svg: require("../../static/img/undraw_docusaurus_react.svg").default,
-    description: <>黑夜很漫长，所以黎明的光才显得那么耀眼~</>,
+    description: <></>,
   },
 ];
 
